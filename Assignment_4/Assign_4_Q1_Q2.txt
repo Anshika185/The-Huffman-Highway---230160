@@ -1,0 +1,9 @@
+Ans 1. This code will not show error as " i[arr] " is valid expression in C++. The operator '[ ]' can be used in either way as arr[i]
+is equivalent to i[arr].Reason is that arr[i] translates to '*(arr + i)' and 'i[arr]' translates to '*(i + arr)' and by commutativity
+of addition both expressions are equivalent and hence code is not showing any error and is correct.'arr' is a pointer to the first 
+element of the array. When you write 'arr[i]', it means the element at index 'i' in the array 'arr'. Similarly, 'i[arr]' means the same 
+thing because 'i + arr' points to the same memory location as 'arr + i'.
+
+Ans2. In the first line we will get the memory address and for the next line we will get " abcde " as output. This is so because the 
+array name 'arr' decays to a pointer to its first element. Thus cout prints the address this pointer points to. In second line 'cout' 
+interprets 'char' pointer as a C string and therefore prints the characters in the array.
